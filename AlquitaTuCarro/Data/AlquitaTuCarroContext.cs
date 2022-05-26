@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using AlquitaTuCarro.Models;
+using AlquitaTuCarro.Entities;
 
 namespace AlquitaTuCarro.Data
 {
@@ -29,5 +30,6 @@ namespace AlquitaTuCarro.Data
         public DbSet<AlquitaTuCarro.Models.VehicleBrand>? VehicleBrand { get; set; }
 
         public DbSet<AlquitaTuCarro.Models.VehicleType>? VehicleType { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
