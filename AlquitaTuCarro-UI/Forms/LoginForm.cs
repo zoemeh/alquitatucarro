@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AlquitaTuCarro_UI
+namespace AlquitaTuCarro.UI.Forms
 {
-    public partial class FuelTypeForm : Form
+    public partial class LoginForm : Form
     {
-        public FuelTypeForm()
+        public LoginForm()
         {
             InitializeComponent();
         }

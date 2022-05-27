@@ -1,6 +1,6 @@
-﻿namespace AlquitaTuCarro_UI
+﻿namespace AlquitaTuCarro.UI.Forms
 {
-    partial class FuelTypeForm
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // FuelTypeForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1035, 753);
-            this.Name = "FuelTypeForm";
-            this.Text = "FuelTypeForm";
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "LoginForm";
         }
 
         #endregion

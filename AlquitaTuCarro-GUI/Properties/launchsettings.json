@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "AlquitaTuCarro-GUI (Package)": {
+        "commandName": "MsixPackage"
+      },
+      "AlquitaTuCarro-GUI (Unpackaged)": {
+        "commandName": "Project"
+      }
+    }
+}
