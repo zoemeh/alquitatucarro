@@ -70,6 +70,16 @@
             this.Text = "LoginForm";
             this.ResumeLayout(false);
             this.PerformLayout();
+            this.SuspendLayout();
+            // 
+            // LoginForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(822, 515);
+            this.Name = "LoginForm";
+            this.Text = "LoginForm";
+            this.ResumeLayout(false);
 
         }
 
