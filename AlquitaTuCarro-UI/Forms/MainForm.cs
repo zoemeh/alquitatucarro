@@ -1,4 +1,5 @@
 ﻿using AlquitaTuCarro.Models;
+using AlquitaTuCarro.UI.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,14 +14,15 @@ namespace AlquitaTuCarro_UI
 {
     public partial class MainForm : Form
     {
-        private BaseIndexForm<FuelType> FuelTypesForm;
+        public BaseIndexForm<FuelType> FuelTypesForm;
         private BaseIndexForm<VehicleType> VehicleTypesForm;
         private BaseIndexForm<VehicleBrand> VehicleBrandsForm;
         private BaseIndexForm<Vehicle> VehiclesForm;
         private BaseIndexForm<Client> ClientsForm;
+        private LoginForm loginForm;
 
         private Form _currentform;
-        private Form CurrentForm
+        public Form CurrentForm
         {
             get => _currentform;
             set
@@ -42,8 +44,9 @@ namespace AlquitaTuCarro_UI
             VehicleBrandsForm = new BaseIndexForm<VehicleBrand>(apiUrl: "https://localhost:7163/api/VehicleBrands", title: "Marcas de Vehiculos");
             VehiclesForm = new BaseIndexForm<Vehicle>(apiUrl: "https://localhost:7163/api/Vehicles", title: "Vehiculos");
             ClientsForm = new BaseIndexForm<Client>(apiUrl: "https://localhost:7163/api/Clients", title: "Clientes");
+            loginForm = new LoginForm();
 
-
+            MakeInlineForm(loginForm);
             MakeInlineForm(FuelTypesForm);
             MakeInlineForm(VehicleTypesForm);
             MakeInlineForm(VehicleBrandsForm);
@@ -82,6 +85,11 @@ namespace AlquitaTuCarro_UI
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CurrentForm = ClientsForm;
+        }
+
+        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CurrentForm = loginForm;
         }
     }
 }

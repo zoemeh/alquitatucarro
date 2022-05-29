@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AlquitaTuCarro.Data;
 using AlquitaTuCarro.Models;
+using AlquitaTuCarro.Authorization;
 
 namespace AlquitaTuCarro.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class FuelTypesController : ControllerBase
