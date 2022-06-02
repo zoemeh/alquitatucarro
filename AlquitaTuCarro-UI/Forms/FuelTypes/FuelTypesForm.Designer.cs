@@ -1,6 +1,6 @@
-﻿namespace AlquitaTuCarro_UI
+﻿namespace AlquitaTuCarro.UI.Forms
 {
-    partial class BaseIndexForm<ModelType>
+    partial class FuelTypesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,42 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.CrearBtn = new System.Windows.Forms.Button();
             this.BorrarBtn = new System.Windows.Forms.Button();
-            this.alquitaTuCarroContextBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alquitaTuCarroContextBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 171);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
-            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 145);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(1441, 764);
+            this.dataGridView1.Size = new System.Drawing.Size(1263, 666);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEndEdit);
             // 
             // CrearBtn
             // 
-            this.CrearBtn.Location = new System.Drawing.Point(1324, 109);
-            this.CrearBtn.Margin = new System.Windows.Forms.Padding(6);
+            this.CrearBtn.Location = new System.Drawing.Point(1125, 76);
             this.CrearBtn.Name = "CrearBtn";
-            this.CrearBtn.Size = new System.Drawing.Size(139, 49);
+            this.CrearBtn.Size = new System.Drawing.Size(150, 46);
             this.CrearBtn.TabIndex = 1;
             this.CrearBtn.Text = "Crear";
             this.CrearBtn.UseVisualStyleBackColor = true;
-            this.CrearBtn.Click += new System.EventHandler(this.CrearBtn_Click);
+            this.CrearBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // BorrarBtn
             // 
-            this.BorrarBtn.Location = new System.Drawing.Point(1165, 109);
+            this.BorrarBtn.Location = new System.Drawing.Point(969, 76);
             this.BorrarBtn.Name = "BorrarBtn";
             this.BorrarBtn.Size = new System.Drawing.Size(150, 46);
             this.BorrarBtn.TabIndex = 2;
@@ -71,25 +64,18 @@
             this.BorrarBtn.UseVisualStyleBackColor = true;
             this.BorrarBtn.Click += new System.EventHandler(this.BorrarBtn_Click);
             // 
-            // alquitaTuCarroContextBindingSource
-            // 
-            this.alquitaTuCarroContextBindingSource.DataSource = typeof(AlquitaTuCarro.Data.AlquitaTuCarroContext);
-            // 
-            // BaseIndexForm
+            // FuelTypesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1509, 972);
+            this.ClientSize = new System.Drawing.Size(1299, 823);
             this.Controls.Add(this.BorrarBtn);
             this.Controls.Add(this.CrearBtn);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "BaseIndexForm";
-            this.Text = "BaseIndexForm";
-            this.Load += new System.EventHandler(this.BaseIndexForm_Load);
-            this.Shown += new System.EventHandler(this.BaseIndexForm_Shown);
+            this.Name = "FuelTypesForm";
+            this.Text = "Tipos de Combustible";
+            this.Load += new System.EventHandler(this.FuelTypesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.alquitaTuCarroContextBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -99,6 +85,5 @@
         private DataGridView dataGridView1;
         private Button CrearBtn;
         private Button BorrarBtn;
-        private BindingSource alquitaTuCarroContextBindingSource;
     }
 }

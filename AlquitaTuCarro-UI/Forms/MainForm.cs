@@ -14,7 +14,7 @@ namespace AlquitaTuCarro_UI
 {
     public partial class MainForm : Form
     {
-        public BaseIndexForm<FuelType> FuelTypesForm;
+        public FuelTypesForm FuelTypesForm;
         private BaseIndexForm<VehicleType> VehicleTypesForm;
         private BaseIndexForm<VehicleBrand> VehicleBrandsForm;
         private BaseIndexForm<Vehicle> VehiclesForm;
@@ -39,11 +39,11 @@ namespace AlquitaTuCarro_UI
         public MainForm()
         {
             InitializeComponent();
-            FuelTypesForm = new BaseIndexForm<FuelType>(apiUrl: "https://localhost:7163/api/FuelTypes", title: "Tipos de Combustible");
-            VehicleTypesForm = new BaseIndexForm<VehicleType>(apiUrl: "https://localhost:7163/api/VehicleTypes", title: "Tipos de Vehiculos");
-            VehicleBrandsForm = new BaseIndexForm<VehicleBrand>(apiUrl: "https://localhost:7163/api/VehicleBrands", title: "Marcas de Vehiculos");
-            VehiclesForm = new BaseIndexForm<Vehicle>(apiUrl: "https://localhost:7163/api/Vehicles", title: "Vehiculos");
-            ClientsForm = new BaseIndexForm<Client>(apiUrl: "https://localhost:7163/api/Clients", title: "Clientes");
+            FuelTypesForm = new FuelTypesForm();
+            VehicleTypesForm = new BaseIndexForm<VehicleType>(apiUrl: "https://localhost:7163/api/VehicleTypes", title: "Tipos de Vehiculos", createForm: new Form());
+            VehicleBrandsForm = new BaseIndexForm<VehicleBrand>(apiUrl: "https://localhost:7163/api/VehicleBrands", title: "Marcas de Vehiculos", createForm: new Form());
+            VehiclesForm = new BaseIndexForm<Vehicle>(apiUrl: "https://localhost:7163/api/Vehicles", title: "Vehiculos", createForm: new Form());
+            ClientsForm = new BaseIndexForm<Client>(apiUrl: "https://localhost:7163/api/Clients", title: "Clientes", createForm: new Form());
             loginForm = new LoginForm();
 
             MakeInlineForm(loginForm);
@@ -90,6 +90,12 @@ namespace AlquitaTuCarro_UI
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CurrentForm = loginForm;
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            var f = new LoginForm();
+            f.ShowDialog();
         }
     }
 }

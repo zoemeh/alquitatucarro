@@ -35,16 +35,19 @@
             // 
             // UserBox
             // 
-            this.UserBox.Location = new System.Drawing.Point(268, 83);
+            this.UserBox.Location = new System.Drawing.Point(237, 198);
+            this.UserBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.UserBox.Name = "UserBox";
-            this.UserBox.Size = new System.Drawing.Size(200, 39);
+            this.UserBox.PlaceholderText = "Usuario";
+            this.UserBox.Size = new System.Drawing.Size(368, 39);
             this.UserBox.TabIndex = 0;
             // 
             // LoginBtn
             // 
-            this.LoginBtn.Location = new System.Drawing.Point(289, 203);
+            this.LoginBtn.Location = new System.Drawing.Point(237, 350);
+            this.LoginBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(150, 46);
+            this.LoginBtn.Size = new System.Drawing.Size(368, 98);
             this.LoginBtn.TabIndex = 1;
             this.LoginBtn.Text = "Entrar";
             this.LoginBtn.UseVisualStyleBackColor = true;
@@ -52,34 +55,27 @@
             // 
             // PasswordBox
             // 
-            this.PasswordBox.Location = new System.Drawing.Point(268, 149);
+            this.PasswordBox.Location = new System.Drawing.Point(237, 269);
+            this.PasswordBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.PasswordChar = '*';
-            this.PasswordBox.Size = new System.Drawing.Size(200, 39);
+            this.PasswordBox.PlaceholderText = "Password";
+            this.PasswordBox.Size = new System.Drawing.Size(368, 39);
             this.PasswordBox.TabIndex = 3;
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(984, 683);
             this.Controls.Add(this.PasswordBox);
             this.Controls.Add(this.LoginBtn);
             this.Controls.Add(this.UserBox);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             this.ResumeLayout(false);
             this.PerformLayout();
-            this.SuspendLayout();
-            // 
-            // LoginForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(822, 515);
-            this.Name = "LoginForm";
-            this.Text = "LoginForm";
-            this.ResumeLayout(false);
 
         }
 

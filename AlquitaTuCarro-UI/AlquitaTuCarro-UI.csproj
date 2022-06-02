@@ -17,4 +17,10 @@
     <ProjectReference Include="..\AlquitaTuCarro\AlquitaTuCarro.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Forms\VehicleModel\" />
+    <Folder Include="Forms\VehicleBrand\" />
+    <Folder Include="Forms\Vehicle\" />
+  </ItemGroup>
+
 </Project>

@@ -24,6 +24,7 @@ namespace AlquitaTuCarro.UI.Forms
         {
             string username = UserBox.Text;
             string password = PasswordBox.Text;
+            LoginBtn.Enabled = false;
             if (username != null && password != null)
             {
                 var client = new HttpClient();
@@ -43,9 +44,13 @@ namespace AlquitaTuCarro.UI.Forms
                     dynamic j = JObject.Parse(s);
                     string token = j.token;
                     TokenStore.Token = token;
-                    Program.mainForm.CurrentForm = Program.mainForm.FuelTypesForm;
-                } else
+                    Program.mainForm.Show();
+                    Program.mainForm.CurrentForm = Program.mainForm.FuelTypesForm;  
+                    Close();
+                }
+                else
                 {
+                    LoginBtn.Enabled = true;
                     MessageBox.Show("Wrong User");
                 }
            
